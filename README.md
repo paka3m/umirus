@@ -1,17 +1,24 @@
 # umirus
 umirus generates programs which iteratively copy included datas (like computer virus. Of course, its not virus.)
 
-# Motivation
-I would like to see a beautiful sea and feel at ease... (umi[うみ/海] means sea/ocean in Japanese...)
+## Motivation
+I would like to see a beautiful sea and feel at ease... so I decided to fill up my desktop with "うみ" pngs automatically. (umi[うみ/海] means sea/ocean in Japanese...)
 
-# Installation
+## Installation
+
+    go get github.com/paka3m/umirus
+    umirus
+
+![umirusimplementation](https://user-images.githubusercontent.com/11421401/28755586-2182deda-7599-11e7-98d1-baba586de3fe.png)
+
+## how to reprogram as you like... 
 
     git clone git@github.com:paka3m/umirus.git
     cd umirus
     
 You have to copy the (image)-files into ```umirus/assets``` folder. 
 
-In this case, ```umirus/assets/umi``` is a place of example cute images related to sea, which can be downloaded from http://www.irasutoya.com/.
+In this case, ```umirus/assets/umi``` is a place of example cute images related to sea, which you can download freely from http://www.irasutoya.com/2013/11/blog-post_3484.html.
 
     ls ./assets/umi
     >   animal_jinbeizame.png
@@ -31,9 +38,13 @@ and build it with ldflags.
 
 now ```umirusd``` program is generated.
 
-if you execute this program, images will be generated.
+while executing this program, images will be generated.
 
-# How to stop (Unix)
+![GeneratedManyFiles](https://user-images.githubusercontent.com/11421401/28755340-54298966-7593-11e7-904e-e9d27e5e02f4.png)
+
+![GeneratedMuchManyFiles](https://user-images.githubusercontent.com/11421401/28755328-01d16f94-7593-11e7-9048-31378db6f543.png)
+
+## How to stop (Unix)
 Don't be afraid. It's very easy! All you have to do is to command
 
     pgrep -f 'umirusd' | xargs kill
