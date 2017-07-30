@@ -6,8 +6,9 @@ I would like to see a beautiful sea and feel at ease... so I decided to fill up 
 
 ## Installation
 
-    go get github.com/paka3m/umirus
-    umirus
+    git clone git@github.com:paka3m/umirus.git
+    cd umirus
+    go build -ldflags "-X main.filename=うみうみFile -X main.dir=assets/umi -X main.wait=1s" -o umirusd
 
 ![umirusimplementation](https://user-images.githubusercontent.com/11421401/28755586-2182deda-7599-11e7-98d1-baba586de3fe.png)
 
@@ -34,7 +35,7 @@ Next, you have to include these files to the binary by using ```go-bindata```.
 
 and build it with ldflags.
 
-    go build -ldflags "-X main.filename=うみうみFile -X main.dir=assets/umi -X main.wait=1s" -o umirusd
+    go build -ldflags "-X main.filename=うみうみFile -X main.dir=assets/umi -X main.wait=1s"
 
 now ```umirusd``` program is generated.
 
